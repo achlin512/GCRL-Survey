@@ -1,10 +1,6 @@
 # GCRL-Survey
 This Repository is aimed to summary how many GCRL algorithms use goal distribution in training
 
-# GCRL-Collection
-
-This repo relates to the survey paper <[Goal-Conditioned Reinforcement Learning: Problems and Solutions](https://arxiv.org/abs/2201.08299)>. We collects widely used benchmark environments and conclude a series of research works for goal-conditioned reinforcement learning (GCRL).
-
 ## Summary of collected algorithms
 
 | Approach                                                                                                                                                                                                                                                                                                                                           | Resolved Goal Type | Sub-Goal | Relabel | Optimization |
@@ -38,42 +34,3 @@ This repo relates to the survey paper <[Goal-Conditioned Reinforcement Learning:
 | [AMIGo](https://arxiv.org/pdf/2006.12122.pdf)                                                                                                                                                                                                                                                                                                      | Image              | ✅        |         |              |
 | [GAP](http://proceedings.mlr.press/v119/nair20a/nair20a.pdf)                                                                                                                                                                                                                                                                                       | Image              |          |         | ✅            |
 | [LEXA](https://arxiv.org/pdf/2110.09514.pdf)                                                                                                                                                                                                                                                                                                       | Image              |          |         | ✅            |
-
-## Widely used benchmark environments.
-
-Update: Most of these environments has been integrated in [Gymnasium-Robotics](https://robotics.farama.org/).
-
-Note almost all environments support various kinds of goal structures, i.e., vector, image, language, etc.
-
-| Environment                                                                         | Benchmark Type        | Common Used Goal Structure | Description                                                                |
-| ----------------------------------------------------------------------------------- | --------------------- | -------------------------- | -------------------------------------------------------------------------- |
-| [FetchReach](https://github.com/Farama-Foundation/Gym-Robotics)                     | Gym Robotics/Mujoco   | Vector/Image               | A robotic arm reaches a target position                                    |
-| [FetchPush](https://github.com/Farama-Foundation/Gym-Robotics)                      | Gym Robotics/Mujoco   | Vector/Image               | A robotic arm pushes a block to a target position                          |
-| [FetchPickAndPlace](https://github.com/Farama-Foundation/Gym-Robotics)              | Gym Robotics/Mujoco   | Vector/Image               | A robotic arm first picks up the block then places it to a target position |
-| [FetchSlide](https://github.com/Farama-Foundation/Gym-Robotics)                     | Gym Robotics/Mujoco   | Vector/Image               | A robotic arm slides a buck to a goal position                             |
-| [HandManipulateBlock](https://github.com/Farama-Foundation/Gym-Robotics)            | Gym Robotics/Mujoco   | Vector/Image               | Orient a block using a robot hand                                          |
-| [HandManipulateEgg](https://github.com/Farama-Foundation/Gym-Robotics)              | Gym Robotics/Mujoco   | Vector/Image               | Orient an egg using a robot hand                                           |
-| [HandManipulatePen](https://github.com/Farama-Foundation/Gym-Robotics)              | Gym Robotics/Mujoco   | Vector/Image               | Orient a pen using a robot hand                                            |
-| [HalfCheetah](https://github.com/vitchyr/multiworld)                                | Mujoco                | Vector/Image               | Make a 2D cheetah robot run and keep a specific speed                      |
-| [AntLocomotion/Ant Maze](https://sites.google.com/view/goalgeneration4rl)           | Mujoco                | Vector                     | Make a 3D four-legged robot walk to a target position                      |
-| [Sawyer](https://github.com/vitchyr/multiworld)                                     | Mujoco                | Vector                     | A sawyer robot reaches a target position                                   |
-| [Reacher](https://github.com/vitchyr/multiworld)                                    | Mujoco                | Vector/Image               | A reacher robot reaches a target position                                  |
-| [N-D Mass](https://sites.google.com/view/goalgeneration4rl)                         | Mujoco                | Vector                     | A ball reaches a target position                                           |
-| [DoorOpening](https://github.com/suraj-nair-1/goal_aware_prediction)                | Mujoco                | Image                      | A sawyer robot opens a door by latching onto the handle                    |
-| [Dy-Reaching](https://github.com/mengf1/DHER)                                       | Mujoco                | Image                      | A robotic arm reaches a target position moving along a straight line       |
-| [Dy-Circling](https://github.com/mengf1/DHER)                                       | Mujoco                | Image                      | A robotic arm reaches a target position moving along a circle              |
-| [Dy-Pushing](https://github.com/mengf1/DHER)                                        | Mujoco                | Image                      | A robotic arm moves the box to a moving target position                    |
-| [Dy-Pouring](https://github.com/mengf1/DHER)                                        | Mujoco                | Image                      | A robotic arm grips the can and pours the water into a cup                 |
-| [WaterMaze](https://github.com/deepmind/lab)                                        | DeepMind Lab          | Image                      | Get to a target position described by an image                             |
-| [Seaquest](https://github.com/mgbellemare/Arcade-Learning-Environment)              | Atari                 | Image                      | Get to a target position described by an image                             |
-| [Montezuma’s Revenge](https://github.com/mgbellemare/Arcade-Learning-Environment)   | Atari                 | Image                      | Get to a target position described by an image                             |
-| [Reacher](https://github.com/deepmind/dm_control/tree/main/dm_control/suite)        | DeepMind Control Suit | Image                      | A two-link planar reacher poses an aimed shape                             |
-| [Manipulator](https://github.com/deepmind/dm_control/tree/main/dm_control/suite)    | DeepMind Control Suit | Image                      | A 3-DoF finger robot rotates the body into a target orientation            |
-| [Finger](https://github.com/google-research/google-research/tree/master/c_learning) | DeepMind Control Suit | Image                      | A planar manipulator brings an object in a target location                 |
-| [Place Object in Tray](https://sites.google.com/view/val-rl)                        | PyBullet              | Image                      | A robotic arm puts toys into a tray                                        |
-| [Opening Drawer](https://sites.google.com/view/val-rl)                              | PyBullet              | Image                      | A robotic arm opens the drawer                                             |
-| [PickandPlace](https://sites.google.com/view/val-rl)                                | PyBullet              | Image                      | A robotic arm first picks up the block then places it to a target position |
-| [Five Object Manipulation](https://github.com/google-research/clevr_robot_env)      | CLEVR-Robot/Mujoco    | Image/Language             | A point mass agent arranges, orders and sorts 5 fixed objects              |
-| [Diverse Object Manipulation](https://github.com/google-research/clevr_robot_env)   | CLEVR-Robot/Mujoco    | Image/Language             | A point mass agent orders objects in different shapes and colors           |
-| [Playground](https://github.com/flowersteam/playground_env)                         | Playground            | Image/Language             | A 2D hand moves and grasps/releases different objects                      |
-| [VizDoom](https://github.com/mwydmuch/ViZDoom)                                      | ViZDoom               | Image/Language             | AI bots reach specific place in the first person shooter 3D game Doom      |
